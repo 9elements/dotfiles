@@ -10,8 +10,8 @@ Resistance is futile!
 * Clone this repo to your home dir <code>git clone https://github.com/9elements/dotfiles.git</code>
 * Configure fish:
 
-  mkdir -p ~/.config/fish
-  cp -r fish/* ~/.config/fish/
+    mkdir -p ~/.config/fish
+    cp -r fish/* ~/.config/fish/
 
 * mate /etc/shells and add <code>/usr/local/bin/fish</code>
 * Make fish the default shell <code>chsh -s /usr/local/bin/fish</code>
