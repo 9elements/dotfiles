@@ -13,6 +13,12 @@ Resistance is futile!
 * Make fish the default shell <code>chsh -s /usr/local/bin/fish</code>
 * Start a new shell and update your completions <code>fish_update_completions</code>
 
+## Update
+
+    cd ~/dotfiles
+    gp
+    cp -r ~/dotfiles/fish/* ~/.config/fish/
+
 ## I want my old shell back
 
 <code>chsh -s /bin/bash</code>
