@@ -4,6 +4,8 @@ if status --is-login
   set ANDROID_HOME /Users/sebastiandeutsch/development/java/android-sdk-mac_x86/
 end
 
+set CDPATH . ~/development ~/development/ruby
+
 alias startmongo "mongod run --config /usr/local/Cellar/mongodb/1.6.5-x86_64/mongod.conf"
 alias startmysql "mysql.server start"
 alias startpg "pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
