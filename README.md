@@ -11,3 +11,8 @@ Resistance is futile!
 * Configure fish <code>mkdir -p ~/.config/fish; cp -r ~/dotfiles/fish/* ~/.config/fish/</code>
 * mate/vim/subl <code>/etc/shells</code> and add <code>/usr/local/bin/fish</code>
 * Make fish the default shell <code>chsh -s /usr/local/bin/fish</code>
+* Start a new shell and update your completions <code>fish_update_completions</code>
+
+## I want my old shell back
+
+<code>chsh -s /bin/bash</code>
