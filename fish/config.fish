@@ -3,7 +3,7 @@ if status --is-login
   set ANDROID_HOME /Users/sebastiandeutsch/development/java/android-sdk-mac_x86/
 end
 
-set -xg PATH "$HOME/.rbenv/bin" "$HOME/.rbenv/shims" $PATH
+set -xg PATH "$HOME/.rbenv/bin" "$HOME/.rbenv/shims" "/usr/local/share/npm/bin" $PATH
 rbenv rehash ^/dev/null
 
 set CDPATH . ~/development ~/development/ruby
@@ -12,6 +12,7 @@ set RUBY_HEAP_SLOTS_INCREMENT 1000000
 set RUBY_HEAP_SLOTS_GROWTH_FACTOR 1
 set RUBY_GC_MALLOC_LIMIT 100000000
 set RUBY_HEAP_FREE_MIN 500000
+set EDITOR joe
 
 alias startelastic "elasticsearch -f -D es.config=/usr/local/Cellar/elasticsearch/0.19.8/config/elasticsearch.yml"
 alias stopelastic "launchctl unload -wF ~/Library/LaunchAgents/homebrew.mxcl.elasticsearch.plist"
