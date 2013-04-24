@@ -1,5 +1,15 @@
 # This is the default .slate file.
 # If no ~/.slate file exists this is the file that will be used.
+# lot of stuff found in http://thume.ca/howto/2012/11/19/using-slate/
+
+# Abstract positions
+alias full move screenOriginX;screenOriginY screenSizeX;screenSizeY
+alias lefthalf move screenOriginX;screenOriginY screenSizeX/2;screenSizeY
+alias righthalf move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;screenSizeY
+alias topleft corner top-left resize:screenSizeX/2;screenSizeY/2
+alias topright corner top-right resize:screenSizeX/2;screenSizeY/2
+alias bottomleft corner bottom-left resize:screenSizeX/2;screenSizeY/2
+alias bottomright corner bottom-right resize:screenSizeX/2;screenSizeY/2
 
 config defaultToCurrentScreen true
 config nudgePercentOf screenSize
@@ -15,6 +25,18 @@ bind right:alt;ctrl;cmd  push right bar-resize:screenSizeX/3
 bind left:alt;ctrl;cmd   push left  bar-resize:screenSizeX/3
 bind up:alt;ctrl;cmd     push up    bar-resize:screenSizeY/3
 bind down:alt;ctrl;cmd   push down  bar-resize:screenSizeY/3
+
+# Window Hints
+bind e:cmd hint ASDFGHJKLQWERTYUIOPCVBN # use whatever keys you want
+
+# Chrome in focus
+bind b:cmd;alt focus 'Google Chrome'
+
+# 1monitor
+layout 1monitor 'Google Chrome':  push left  bar-resize:screenSizeX/2
+layout 1monitor 'Sublime Text 2': move screenOriginX+screenSizeX/2;screenOriginY screenSizeX/2;4*screenSizeY/5
+layout 1monitor 'Terminal':       move screenOriginX+screenSizeX/2;screenOriginY+4*screenSizeY/5 screenSizeX/2;1*screenSizeY/5
+bind 1:cmd;alt layout 1monitor
 
 # # Resize Bindings
 # bind right:alt       resize +10% +0
@@ -55,5 +77,4 @@ bind down:alt;ctrl;cmd   push down  bar-resize:screenSizeY/3
 # bind up:cmd;alt   focus behind
 # bind down:cmd;alt focus behind
 #
-# # Window Hints
-bind esc:cmd hint
+
